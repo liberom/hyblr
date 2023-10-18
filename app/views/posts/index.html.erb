@@ -1,8 +1,10 @@
-<h1> Posts </h1>
+<div id="page_wrapper">
+  <h1> Posts </h1>
 
-<% @posts.each do |post| %>
-  <div class="post_wrapper" >
-    <h3 class="title"> <%= link_to post.title, post %> </h3>
-    <p class="date"> <%= time_ago_in_words(post.created_at) %> </p>
-  </div>
-<% end %>
+  <% @posts.each do |post| %>
+    <div class="post_wrapper" >
+      <h3 class="title"> <%= link_to post.title, post %> </h3>
+      <p class="date"> <%= time_ago_in_words(post.created_at) %> </p>
+    </div>
+  <% end %>
+</div>
