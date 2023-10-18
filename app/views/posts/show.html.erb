@@ -1,9 +1,13 @@
-<h1 class="title"> <%= @post.title %> </h1>
+<div id="page_wrapper">
+  <h1 class="title"> <%= @post.title %> </h1>
 
-<p class="date">
-  Submitted <%= time_ago_in_words(@post.created_at) %>
-</p>
+  <p class="date">
+    Submitted <%= time_ago_in_words(@post.created_at) %>
+    <%= link_to 'Edit', edit_post_path(@post) %>
+  </p>
 
-<p>
-  <%= @post.body %>
-</p>
+  <p>
+    <%= @post.body %>
+  </p>
+
+</div>
