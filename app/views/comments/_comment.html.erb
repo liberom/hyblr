@@ -1,0 +1,10 @@
+<div class="comment clearfix">
+  <div class="comment_content">
+    <p class="comment_name"> <strong><%= comment.name %> </strong> </p>
+    <p class="comment_body"> <%= comment.body %> </p>
+    <p class="comment_title"> <%= time_ago_in_words(comment.created_at) %> ago </p>
+  </div>
+  <p>
+    <%= button_to 'Delete', post_comment_path(comment.post, comment), method: :delete, class: "button", onclick: "return confirm('Are you sure?')", remote: true %>
+  </p>
+</div>
